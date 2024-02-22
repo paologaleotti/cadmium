@@ -1,6 +1,6 @@
 # cadmium
 
-![logo](https://media.discordapp.net/attachments/1004365881675087984/1210230838416121866/Group_37.png?ex=65e9ce4c&is=65d7594c&hm=768ba202b8b704d575eac878175e49d372d04660b75f975791eee66afd985bdf&=&format=webp&quality=lossless)
+![logo](https://media.discordapp.net/attachments/1004365881675087984/1210233012168564736/Group_37.png?ex=65e9d053&is=65d75b53&hm=a197ced24481677e4fc312dc3005fced9d798bf4e709006c228d4accbb802bd4&=&format=webp&quality=lossless)
 
 Ergonomic and reliable remplate to build Rust web applications
 
