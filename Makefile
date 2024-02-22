@@ -3,14 +3,18 @@
 all: build
 
 build:
-	@echo Started DEBUG build
+	@echo Building DEBUG...
 	@cargo build
+
+lint:
+	@echo Linting...
+	@cargo clippy
 
 clean:
 	cargo clean
 
-release:
-	@echo Started RELEASE build
+release: lint
+	@echo Building RELEASE...
 	cargo build --release
 
 update-deps:
