@@ -7,7 +7,6 @@ mod shared;
 
 #[tokio::main]
 async fn main() {
-    tracing_subscriber::fmt::init();
     let port = "3000";
     let addr = format!("0.0.0.0:{}", port);
 
