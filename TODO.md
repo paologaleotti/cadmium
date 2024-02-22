@@ -7,6 +7,6 @@
 -   [ ] Better service and API error handling
 -   [ ] TODO app example
 -   [ ] Dependency inversion
--   [ ] Env variables validation
+-   [x] Env variables validation
 -   [ ] AWS Lambda adapter
 -   [ ] Deploy with docker and lambda

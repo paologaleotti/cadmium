@@ -1,5 +1,6 @@
 use tracing::info;
 
+mod env;
 mod handlers;
 mod init;
 mod routes;

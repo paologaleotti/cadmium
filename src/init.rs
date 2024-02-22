@@ -1,3 +1,4 @@
+use crate::env;
 use crate::routes::make_router;
 use axum::Router;
 use tower::ServiceBuilder;
@@ -8,6 +9,8 @@ pub fn init_app() -> Router {
     tracing_subscriber::fmt()
         .with_max_level(Level::DEBUG)
         .init();
+
+    let _env = env::init_env();
 
     make_router().layer(ServiceBuilder::new().layer(TraceLayer::new_for_http()))
 }
