@@ -1,5 +1,11 @@
 {
-    "rust-analyzer.linkedProjects": [
-        "./Cargo.toml"
-    ]
+	"editor.formatOnSave": true,
+	"explorer.compactFolders": false,
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": "always"
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	},
+	"conventionalCommits.scopes": ["core"]
 }
