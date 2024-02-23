@@ -4,9 +4,10 @@
 -   [x] Axum routing and handlers
 -   [x] Custom ApiError handling
 -   [x] Logging/Tracing
+-   [ ] Request Body validation
 -   [ ] Better service and API error handling
--   [ ] TODO app example
--   [ ] Dependency inversion
+-   [x] TODO app example
+-   [x] Dependency inversion
 -   [x] Env variables validation
 -   [ ] AWS Lambda adapter
 -   [ ] Deploy with docker and lambda
