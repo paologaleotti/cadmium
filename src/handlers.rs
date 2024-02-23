@@ -1,9 +1,9 @@
-use axum::{extract::State, http::StatusCode, Json};
+use axum::{extract::State, http::StatusCode};
 
 use crate::{
     init::{AppDependencies, AppState},
     shared::{
-        core::http::Reply,
+        core::http::{Payload, Reply},
         models::{NewTodo, Todo},
     },
 };
@@ -14,7 +14,7 @@ pub async fn handle_root() -> &'static str {
 
 pub async fn handle_add_todo(
     State(state): AppState,
-    Json(new_todo): Json<NewTodo>,
+    Payload(new_todo): Payload<NewTodo>,
 ) -> (StatusCode, Reply<Todo>) {
     let todo = Todo {
         id: uuid::Uuid::new_v4().to_string(),
