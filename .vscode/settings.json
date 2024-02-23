@@ -7,5 +7,5 @@
 	"[yaml]": {
 		"editor.defaultFormatter": "redhat.vscode-yaml"
 	},
-	"conventionalCommits.scopes": ["core"]
+	"conventionalCommits.scopes": ["core", "http"]
 }
