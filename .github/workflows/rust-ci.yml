@@ -1,0 +1,35 @@
+name: Rust
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install cargo-audit
+        run: cargo install cargo-audit
+      - name: Build
+        run: cargo build --verbose
+      - name: Lint with Clippy
+        run: cargo clippy --verbose -- -D warnings
+      - name: Audit
+        run: cargo audit
+
+      - name: Send Telegram notification
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            [cadmium🦀] Build ${{ job.status }}! 
+            Commit: ${{ github.event.commits[0].message }}
+
+            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
