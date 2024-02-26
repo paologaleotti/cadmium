@@ -10,6 +10,7 @@
 	},
 	"conventionalCommits.scopes": [
 		"core",
-		"http"
+		"http",
+		"deploy"
 	],
 }

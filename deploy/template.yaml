@@ -1,0 +1,31 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: TEST RUST Lambda with API Gateway using SAM
+
+Resources:
+  RustTestLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      Runtime: provided.al2
+      CodeUri: ./bootstrap
+      Handler: bootstrap
+      Architectures:
+        - arm64
+      Policies:
+        - AWSLambdaBasicExecutionRole
+      Events:
+        HttpApiEvent:
+          Type: HttpApi
+          Properties:
+            Path: /
+            Method: ANY
+        HttpApiEventGreedy:
+          Type: HttpApi
+          Properties:
+            Path: /{proxy+}
+            Method: ANY
+
+Outputs:
+  WebEndpoint:
+    Description: "API Gateway endpoint URL for HTTP API"
+    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/"
