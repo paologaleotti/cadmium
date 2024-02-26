@@ -3,7 +3,10 @@ use axum::{extract::State, http::StatusCode};
 use crate::{
     init::{AppDependencies, AppState},
     shared::{
-        core::http::{Payload, Reply},
+        core::{
+            errors::NOT_FOUND,
+            http::{Payload, Reply},
+        },
         models::{NewTodo, Todo},
     },
 };
@@ -28,7 +31,14 @@ pub async fn handle_add_todo(
 pub async fn handle_get_todos(
     State(state): State<AppDependencies>,
 ) -> (StatusCode, Reply<Vec<Todo>>) {
-    let todos = state.db.get();
+    let todos: Vec<Todo> = state.db.get();
+
+    if todos.is_empty() {
+        return (
+            StatusCode::NOT_FOUND,
+            Reply::Error(NOT_FOUND.detail("No todos found")),
+        );
+    }
 
     (StatusCode::OK, Reply::Data(todos))
 }
