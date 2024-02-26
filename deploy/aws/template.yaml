@@ -7,7 +7,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Runtime: provided.al2
-      CodeUri: ./bootstrap
+      CodeUri: ../target/release/bootstrap
       Handler: bootstrap
       Architectures:
         - arm64

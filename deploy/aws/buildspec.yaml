@@ -1,0 +1,17 @@
+version: 0.2
+
+env:
+  shell: bash
+
+phases:
+  install:
+    commands:
+      - sam validate -t deploy/aws/template.yaml
+      - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+      - source $HOME/.cargo/env
+  build:
+    commands:
+      - RUSTFLAGS='-C target-feature=+crt-static' cargo build --release
+  post_build:
+    commands:
+      - sam deploy -t deploy/aws/template.yaml --stack-name $PROJECT_NAME --region $AWS_REGION --resolve-s3 --capabilities CAPABILITY_IAM
