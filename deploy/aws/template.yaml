@@ -7,10 +7,13 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Runtime: provided.al2
-      CodeUri: ../target/release/bootstrap
-      Handler: bootstrap
+      # See Makefile release-lambda script
+      CodeUri: ../../target/release/aws_lambda
+      Handler: lambda
       Architectures:
         - arm64
+      Timeout: 30
+      MemorySize: 256
       Policies:
         - AWSLambdaBasicExecutionRole
       Events:
