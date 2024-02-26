@@ -1,7 +1,7 @@
 use axum::{extract::State, http::StatusCode};
 
 use crate::{
-    init::{AppDependencies, AppState},
+    init::AppState,
     shared::{
         core::{
             errors::NOT_FOUND,
@@ -28,9 +28,7 @@ pub async fn handle_add_todo(
     (StatusCode::CREATED, Reply::Data(todo))
 }
 
-pub async fn handle_get_todos(
-    State(state): State<AppDependencies>,
-) -> (StatusCode, Reply<Vec<Todo>>) {
+pub async fn handle_get_todos(State(state): AppState) -> (StatusCode, Reply<Vec<Todo>>) {
     let todos: Vec<Todo> = state.db.get();
 
     if todos.is_empty() {

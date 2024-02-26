@@ -4,8 +4,12 @@
 	"editor.codeActionsOnSave": {
 		"source.organizeImports": "always"
 	},
+	"rust-analyzer.check.command": "clippy",
 	"[yaml]": {
 		"editor.defaultFormatter": "redhat.vscode-yaml"
 	},
-	"conventionalCommits.scopes": ["core", "http"]
+	"conventionalCommits.scopes": [
+		"core",
+		"http"
+	],
 }
