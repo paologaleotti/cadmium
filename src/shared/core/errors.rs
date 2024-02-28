@@ -40,6 +40,11 @@ lazy_static! {
         code: String::from("FORBIDDEN"),
         message: String::from("You are not authorized to perform this action"),
     };
+    pub static ref CONFLICT: ApiError = ApiError {
+        status: 409,
+        code: String::from("CONFLICT"),
+        message: String::from("Conflict in resources occurred while processing the request"),
+    };
     pub static ref IM_A_TEAPOT: ApiError = ApiError {
         status: 418,
         code: String::from("IM_A_TEAPOT"),
