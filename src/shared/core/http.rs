@@ -45,7 +45,7 @@ where
             Ok(value) => Ok(Self(value.0)),
             Err(rejection) => {
                 let res = Reply::Error(ApiError {
-                    code: String::from("BAD_REQUEST"),
+                    title: String::from("BAD_REQUEST"),
                     message: rejection.body_text(),
                     status: 400,
                 });
