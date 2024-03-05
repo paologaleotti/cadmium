@@ -2,6 +2,7 @@
 	"recommendations": [
 		"rust-lang.rust-analyzer",
 		"redhat.vscode-yaml",
-		"vivaxy.vscode-conventional-commits"
+		"vivaxy.vscode-conventional-commits",
+		"usernamehw.errorlens"
 	]
 }

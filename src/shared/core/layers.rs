@@ -19,7 +19,7 @@ pub fn handle_panic(err: Box<dyn Any + Send + 'static>) -> Response<Full<Bytes>>
     };
 
     let body = ApiError {
-        code: String::from("PANIC"),
+        title: String::from("PANIC"),
         message: details,
         status: 500,
     };
