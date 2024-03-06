@@ -6,7 +6,7 @@ use axum::{
     Json,
 };
 
-use super::errors::ApiError;
+use super::errors::{ApiError, BAD_REQUEST};
 
 #[allow(unused)]
 #[derive(Debug)]
@@ -44,12 +44,7 @@ where
         match axum::Json::<T>::from_request(req, state).await {
             Ok(value) => Ok(Self(value.0)),
             Err(rejection) => {
-                let res = Reply::Error(ApiError {
-                    title: String::from("BAD_REQUEST"),
-                    message: rejection.body_text(),
-                    status: 400,
-                });
-
+                let res = Reply::Error(BAD_REQUEST.detail(rejection.body_text()));
                 Err((rejection.status(), res))
             }
         }
