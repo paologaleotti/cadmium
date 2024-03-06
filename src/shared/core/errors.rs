@@ -30,10 +30,10 @@ lazy_static! {
         title: String::from("NOT_FOUND"),
         message: String::from("The requested resource could not be found"),
     };
-    pub static ref NOT_AUTHENTICATED: ApiError = ApiError {
+    pub static ref UNAUTHORIZED: ApiError = ApiError {
         status: 401,
-        title: String::from("NOT_AUTHENTICATED"),
-        message: String::from("You are not authenticated"),
+        title: String::from("UNAUTHORIZED"),
+        message: String::from("You are not authorized"),
     };
     pub static ref FORBIDDEN: ApiError = ApiError {
         status: 403,
@@ -52,7 +52,7 @@ lazy_static! {
     };
     pub static ref INTERNAL_SERVER_ERROR: ApiError = ApiError {
         status: 500,
-        title: String::from("INTERNAL_SERVER_ERROR"),
+        title: String::from("UNKOWN_INTERNAL"),
         message: String::from("An unexpected error occurred"),
     };
 }
