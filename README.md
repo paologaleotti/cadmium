@@ -8,14 +8,17 @@ Ergonomic and reliable remplate to build Rust web applications
 
 ## Features
 
--   Minimal core template
--   Extremely reliable and type-safe
--   Ergonomic and easy to understand
--   Based on `tokio` and `axum` ecosystem
--   HTTP utilities and error handling
+- Minimal core template
+- Extremely reliable and type-safe
+- Ergonomic and easy to understand
+- Based on `tokio` and `axum` ecosystem
+- HTTP utilities
+- Custom API error handling
+- Panic recovery
+- Custom body validation
 
 ## Stack
 
--   **axum**: web framework based on tokio/tower
--   **Tokio**: asynchronous runtime
--   **tracing**: instrumentation and logging
+- **axum**: web framework based on tokio/tower
+- **Tokio**: asynchronous runtime
+- **tracing**: instrumentation and logging
