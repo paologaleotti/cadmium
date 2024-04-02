@@ -1,6 +1,6 @@
 # cadmium
 
-![logo](https://media.discordapp.net/attachments/1004365881675087984/1210233012168564736/Group_37.png?ex=65e9d053&is=65d75b53&hm=a197ced24481677e4fc312dc3005fced9d798bf4e709006c228d4accbb802bd4&=&format=webp&quality=lossless)
+![logo](https://github.com/paologaleotti/cadmium/assets/45665769/4808657f-c4df-40fc-81ec-ac5c993e84ec)
 
 Ergonomic and reliable remplate to build Rust web applications
 
@@ -8,14 +8,17 @@ Ergonomic and reliable remplate to build Rust web applications
 
 ## Features
 
--   Minimal core template
--   Extremely reliable and type-safe
--   Ergonomic and easy to understand
--   Based on `tokio` and `axum` ecosystem
--   HTTP utilities and error handling
+- Minimal core template
+- Extremely reliable and type-safe
+- Ergonomic and easy to understand
+- Based on `tokio` and `axum` ecosystem
+- HTTP utilities
+- Custom API error handling
+- Panic recovery
+- Custom body validation
 
 ## Stack
 
--   **axum**: web framework based on tokio/tower
--   **Tokio**: asynchronous runtime
--   **tracing**: instrumentation and logging
+- **axum**: web framework based on tokio/tower
+- **Tokio**: asynchronous runtime
+- **tracing**: instrumentation and logging
