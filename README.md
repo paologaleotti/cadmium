@@ -16,6 +16,7 @@ Ergonomic and reliable remplate to build Rust web applications
 - Custom API error handling
 - Panic recovery
 - Custom body validation
+- Full AWS Lambda support (branch [feature/serverless](https://github.com/paologaleotti/cadmium/tree/feature/serverless))
 
 ## Stack
 
