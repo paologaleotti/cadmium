@@ -8,14 +8,18 @@ Ergonomic and reliable remplate to build Rust web applications
 
 ## Features
 
--   Minimal core template
--   Extremely reliable and type-safe
--   Ergonomic and easy to understand
--   Based on `tokio` and `axum` ecosystem
--   HTTP utilities and error handling
+- Minimal core template
+- Extremely reliable and type-safe
+- Ergonomic and easy to understand
+- Based on `tokio` and `axum` ecosystem
+- HTTP utilities
+- Custom API error handling
+- Panic recovery
+- Custom body validation
+- Full AWS Lambda support (branch [feature/serverless](https://github.com/paologaleotti/cadmium/tree/feature/serverless))
 
 ## Stack
 
--   **axum**: web framework based on tokio/tower
--   **Tokio**: asynchronous runtime
--   **tracing**: instrumentation and logging
+- **axum**: web framework based on tokio/tower
+- **Tokio**: asynchronous runtime
+- **tracing**: instrumentation and logging
