@@ -14,7 +14,7 @@ opt-level = 3
 axum = "0.7.5"
 http-body-util = "0.1.1"
 lazy_static = "1.4.0"
-serde = { version = "1.0.201", features = ["derive", "serde_derive"] }
+serde = { version = "1.0.202", features = ["derive", "serde_derive"] }
 serde_json = "1.0.116"
 tokio = { version = "1.37.0", features = [
     "rt",
