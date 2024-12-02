@@ -30,6 +30,6 @@ tower-http = { version = "0.6.1", features = [
     "sensitive-headers",
     "cors",
 ] }
-tracing = "0.1.40"
+tracing = "0.1.41"
 tracing-subscriber = "0.3.18"
 uuid = { version = "1.11.0", features = ["v4"] }
